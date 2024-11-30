@@ -1,5 +1,5 @@
-const video = document.getElementById('video');
-const playPauseButton = document.getElementById('playPause');
+const video = document.querySelector('.player__video'); // Match Cypress selector
+const playPauseButton = document.querySelector('.toggle'); // Match Cypress selector
 const progressBar = document.getElementById('progress');
 const volumeControl = document.getElementById('volume');
 const playbackSpeedControl = document.getElementById('playbackSpeed');
@@ -11,7 +11,7 @@ const currentTimeDisplay = document.getElementById('currentTime');
 playPauseButton.addEventListener('click', () => {
   if (video.paused) {
     video.play();
-    playPauseButton.textContent = '❚ ❚'; // Change to pause icon
+    playPauseButton.textContent = '❚❚'; // Change to pause icon
   } else {
     video.pause();
     playPauseButton.textContent = '►'; // Change to play icon
